@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/public/*": ["./public/*"],
+      "@/examples/*": ["./examples/*"],
+      "@/core/*": ["./src/core/*"],
+      "@/ui/*": ["./src/ui/*"],
+      "@/lib/*": ["./src/ui/lib/*"],
+      "@/components/*": ["./src/ui/components/*"],
+      "@/layouts/*": ["./src/ui/layouts/*"],
+      "@/connectors/*": ["./src/ui/connectors/*"],
+      "@/styles/*": ["./src/ui/styles/*"],
+      "@/hooks/*": ["./src/hooks/*"]
+    }
+  },
+  "include": [
+    "global.d.ts",
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.js",
+    "**/*.tsx"
+  ],
+  "exclude": ["node_modules", "coverage"]
+}
