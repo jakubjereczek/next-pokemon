@@ -44,7 +44,7 @@ export function generateViewport(): Viewport {
 
 interface RootLayoutProps {
   children: React.ReactNode;
-  params: { locale: 'pl' | 'en' };
+  params: { locale: 'pl' | 'en' | 'nl' };
 }
 
 export default async function RootLayout({
