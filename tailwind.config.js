@@ -4,7 +4,8 @@ export default {
   prefix: '',
   theme: {
     fontFamily: {
-      sans: ['Suisse Intl Book', 'sans-serif'],
+      sans: ['Suisse Intl', 'sans-serif'],
+      mono: ['FK Grotesk Monospaced'],
     },
     extend: {
       borderRadius: {
