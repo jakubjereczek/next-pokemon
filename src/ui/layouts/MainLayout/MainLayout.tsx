@@ -1,9 +1,11 @@
+import { Flex } from '@/ui/components/Flex/Flex';
+
 const MainLayout = ({ children }: { children: React.ReactNode }) => (
-  <>
-    <main className="flex min-h-screen max-w-[110rem] justify-center bg-primary-foreground">
-      <div className="w-full pt-16">{children}</div>
+  <Flex asChild justify="center">
+    <main className="min-h-screen bg-lightBlue">
+      <div className="w-full">{children}</div>
     </main>
-  </>
+  </Flex>
 );
 
 export default MainLayout;

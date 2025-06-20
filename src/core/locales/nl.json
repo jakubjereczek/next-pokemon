@@ -1,6 +1,15 @@
 {
   "Homepage": {
-    "title": "Pokémons"
+    "title": "Alle Pokémons",
+    "search": "Zoeken",
+    "items": {
+      "pokemon": "Pokémon",
+      "favourites": "Favorieten"
+    },
+    "copyright": {
+      "company": "Copyright 2022 Triple. Alle rechten voorbehouden.",
+      "trademarks": "Pokémon en de namen van Pokémon-personages zijn handelsmerken van Nintendo."
+    }
   },
   "Metadata": {
     "title": "Pokédex",

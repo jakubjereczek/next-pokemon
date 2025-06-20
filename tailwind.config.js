@@ -8,6 +8,10 @@ export default {
       mono: ['FK Grotesk Monospaced'],
     },
     extend: {
+      screens: {
+        uxl: '1366px',
+        xl: '1440px', // desktop
+      },
       borderRadius: {
         sm: '0.5rem',
         md: '1rem',
@@ -16,56 +20,23 @@ export default {
         pill: '9999px',
       },
       colors: {
-        background: '#f8fafc',
-        foreground: '#1e293b',
-        primary: {
-          DEFAULT: '#3b82f6',
-          foreground: '#ffffff',
-        },
-        secondary: {
-          DEFAULT: '#64748b',
-          foreground: '#ffffff',
-        },
-        accent: {
-          DEFAULT: '#8b5cf6',
-          foreground: '#ffffff',
-        },
-        modal: '#ffffff',
-        input: '#e2e8f0',
-        overlay: 'rgb(0 0 0 / 80%)',
-
-        white: '#ffffff',
-        black: '#000000',
-        gray: {
-          100: '#f1f1f1',
-          200: '#e0e0e0',
-          300: '#c4c4c4',
-          400: '#9e9e9e',
-          500: '#757575',
-          600: '#616161',
-          700: '#424242',
-          800: '#212121',
-          900: '#121212',
-        },
-        blue: {
-          100: '#cce4ff',
-          200: '#99c9ff',
-          300: '#66a9ff',
-          400: '#3387ff',
-          500: '#0065ff',
-          600: '#0051cc',
-          700: '#003c99',
-          800: '#002766',
-          900: '#001533',
-        },
+        white: '#FFFFFF',
+        lightBlueGray: '#F6F6FF',
+        lightBlue: '#EDF6FF',
+        lightGray: '#E7E6EC',
+        gray: '#D9D9D9',
+        brightPurple: '#5631E8',
+        darkNavy: '#0E0940',
       },
       fontSize: {
         h1: ['3rem', { lineHeight: '1.375', fontWeight: '300' }],
-        h2: ['1.5rem', { lineHeight: '1.375', fontWeight: '500' }],
+        h2: ['2rem', { lineHeight: '1.375', fontWeight: '500' }],
+        h2_min: ['1.5rem', { lineHeight: '1.5', fontWeight: '500' }],
         h3: ['1.125rem', { lineHeight: '1.5', fontWeight: '500' }],
         h4: ['1rem', { lineHeight: '1.5', fontWeight: '500' }],
         'body-1': ['1rem', { lineHeight: '1.5', fontWeight: '400' }],
         'body-2': ['0.875rem', { lineHeight: '1.5', fontWeight: '400' }],
+        'body-3': ['0.75rem', { lineHeight: '1.375', fontWeight: '400' }],
       },
       keyframes: {
         fadeIn: {

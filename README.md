@@ -60,7 +60,7 @@ With each PR you can 'check' the user story that is related to it, so you have a
 
 - [ ] The user must be able to see all of the following stories on either PC, Tablet of Mobile (Responsive)
 - [ ] The user must be able to see a list of Pokemon in the styled overview
-- [ ] The user must be able to see the sidebar and its content
+- [x] The user must be able to see the sidebar and its content
 - [ ] The user must be able to click on a Pokemon to navigate to a detail page of a single Pokemon
 - [ ] The user must be able to see all the stats of a Pokemon in three tabs
 - [ ] The user must be able to check/uncheck a Pokemon as favorite
