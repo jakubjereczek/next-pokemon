@@ -1,10 +1,18 @@
 import type { FC } from 'react';
+import { EllipsisVertical } from 'lucide-react';
 import Image from 'next/image';
 import Button from '@/components/Button/Button';
-import { Flex } from '@/components/Flex/Flex';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardHeaderIndex,
+  CardSquare,
+} from '@/components/Card/Card';
+import Typography from '@/components/Typography/Typography';
 import usePokemon from '@/ui/hooks/services/usePokemon';
-import { Card, CardContent, CardHeader } from '../Card/Card';
-import Typography from '../Typography/Typography';
+import { formatNumber } from '@/ui/utils/string';
 
 type PokemonCardProps = {
   pokemonName: string;
@@ -12,38 +20,48 @@ type PokemonCardProps = {
 
 const PokemonCard: FC<PokemonCardProps> = ({ pokemonName }) => {
   const { pokemon } = usePokemon(pokemonName);
-
   if (!pokemon) {
     return null;
   }
 
   return (
-    <Button className="w-full">
-      <Card variant="outline" className="border-none bg-background p-5 shadow">
-        <CardHeader className="p-0">
-          <Flex className="flex-row items-center justify-between gap-2">
+    <Button>
+      <Card variant="outline" className="border-none bg-lightBlueGray shadow">
+        <CardSquare>
+          <CardHeader className="self-start">
+            <CardHeaderIndex className="rounded-md bg-brightPurple text-xs text-white">
+              {formatNumber(pokemon.id)}
+            </CardHeaderIndex>
+          </CardHeader>
+          <CardContent>
             <Image
-              src={'/assets/pokemonlogo.png'}
-              alt="pokemonlogo"
-              width={100}
-              height={100}
+              src={
+                pokemon.sprites.frontDefault
+                  ? pokemon.sprites.frontDefault
+                  : '/assets/pokemonlogo.png'
+              }
+              alt={
+                pokemon.sprites.frontDefault
+                  ? pokemon.name
+                  : `${pokemon.name} placeholder`
+              }
+              className="h-full w-full object-contain"
+              width={200}
+              height={200}
+              quality={100}
             />
-            <Typography>{pokemon.name}</Typography>
-          </Flex>
-        </CardHeader>
-        <CardContent className={'flex flex-col px-0 py-4'}>
-          {pokemon.sprites.frontDefault ? (
-            <Image
-              src={pokemon.sprites.frontDefault}
-              alt={pokemon.name}
-              width={100}
-              height={100}
-            />
-          ) : (
-            // TODO: Add a placeholder image
-            <div className="h-24 w-24 bg-gray-200" />
-          )}
-        </CardContent>
+          </CardContent>
+        </CardSquare>
+        <CardFooter className="flex h-12 items-center justify-between bg-white px-3 font-medium capitalize">
+          <Typography truncate>{pokemon.name}</Typography>
+          <Button
+            onClick={e => {
+              e.stopPropagation();
+            }}
+          >
+            <EllipsisVertical />
+          </Button>
+        </CardFooter>
       </Card>
     </Button>
   );
