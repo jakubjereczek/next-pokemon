@@ -59,7 +59,7 @@ Next to that you'll need to know that there is no deadline for this, you can wor
 With each PR you can 'check' the user story that is related to it, so you have a clear overview of what still needs to be done.
 
 - [ ] The user must be able to see all of the following stories on either PC, Tablet of Mobile (Responsive)
-- [ ] The user must be able to see a list of Pokemon in the styled overview
+- [x] The user must be able to see a list of Pokemon in the styled overview
 - [x] The user must be able to see the sidebar and its content
 - [ ] The user must be able to click on a Pokemon to navigate to a detail page of a single Pokemon
 - [ ] The user must be able to see all the stats of a Pokemon in three tabs
