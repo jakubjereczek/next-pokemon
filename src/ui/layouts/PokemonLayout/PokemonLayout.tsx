@@ -3,28 +3,28 @@
 import { CircleMinus, Menu as MenuIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import * as React from 'react';
-import { useRef } from 'react';
+import { useMemo, useRef } from 'react';
 import { type UINavigationItem, UINavigationKey } from '@/core/structures';
 import Button from '@/ui/components/Button/Button';
 import { Flex } from '@/ui/components/Flex/Flex';
 import Overlay from '@/ui/components/Overlay/Overlay';
-import PokemonCard from '@/ui/components/PokemonCard/PokemonCard';
 import PokemonLogo from '@/ui/components/PokemonLogo/PokemonLogo';
 import PokemonMenu from '@/ui/components/PokemonMenu/PokemonMenu';
 import Typography from '@/ui/components/Typography/Typography';
-import usePokemonList from '@/ui/hooks/services/usePokemonList';
 import useLockBodyScroll from '@/ui/hooks/ui/useLockBodyScroll';
 
-const PokemonLayout: React.FC = () => {
-  const { list } = usePokemonList();
+type Props = {
+  content: React.ReactNode;
+};
+
+const PokemonLayout: React.FC<Props> = ({ content }) => {
   const t = useTranslations('Homepage');
   const ref = useRef<HTMLDivElement | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] =
     React.useState<boolean>(false);
 
   useLockBodyScroll(isMobileMenuOpen);
-
-  const items: UINavigationItem[] = React.useMemo(
+  const items: UINavigationItem[] = useMemo(
     () => [
       {
         key: UINavigationKey.Home,
@@ -75,13 +75,9 @@ const PokemonLayout: React.FC = () => {
         }}
         items={items}
       />
-      <section className="p-6 lg:ml-[320px] lg:p-12 xl:ml-[352px] xl:p-[60px]">
-        <Typography variant="h2">{t('title')}</Typography>
-        <div className="grid grid-cols-2 gap-4 py-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6 lg:py-6 xl:gap-6 xl:py-6">
-          {list.map((name, index) => (
-            <PokemonCard key={`${name}${index}`} pokemonName={name} />
-          ))}
-        </div>
+      <section className="h-full p-6 lg:ml-[320px] lg:p-12 xl:ml-[352px] xl:p-[60px]">
+        <Typography variant="h2">{'Title'}</Typography>
+        {content}
       </section>
     </>
   );
