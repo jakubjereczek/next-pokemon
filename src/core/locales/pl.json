@@ -2,6 +2,7 @@
   "Homepage": {
     "title": "Wszystkie Pokémons",
     "search": "Szukaj",
+    "error": "Nie udało się pobrać kolejnych danych.",
     "items": {
       "pokemon": "Pokémon",
       "favourites": "Ulubione"
@@ -10,6 +11,13 @@
       "company": "Copyright 2022 Triple. Wszelkie prawa zastrzeżone.",
       "trademarks": "Pokémon oraz imiona postaci Pokémon są znakami towarowymi firmy Nintendo."
     }
+  },
+  "NotFound": {
+    "title": "404",
+    "headline": "Ups! Ta strona uciekła!",
+    "descriptionEscape": "Wygląda na to, że wymknęła się z naszego Pokédexu.",
+    "descriptionHelp": "Spokojnie, pomożemy Ci wrócić na właściwą ścieżkę!",
+    "backHome": "Wróć do strony głównej."
   },
   "Metadata": {
     "title": "Pokédex",

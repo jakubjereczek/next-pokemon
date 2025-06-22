@@ -2,6 +2,7 @@
   "Homepage": {
     "title": "Alle Pokémons",
     "search": "Zoeken",
+    "error": "Het is niet gelukt om meer gegevens te laden.",
     "items": {
       "pokemon": "Pokémon",
       "favourites": "Favorieten"
@@ -10,6 +11,13 @@
       "company": "Copyright 2022 Triple. Alle rechten voorbehouden.",
       "trademarks": "Pokémon en de namen van Pokémon-personages zijn handelsmerken van Nintendo."
     }
+  },
+  "NotFound": {
+    "title": "404",
+    "headline": "Oeps! Deze pagina is ervandoor!",
+    "descriptionEscape": "Het lijkt erop dat deze pagina ontsnapt is uit onze Pokédex.",
+    "descriptionHelp": "Geen zorgen, we helpen je de juiste weg terug te vinden!",
+    "backHome": "Terug naar de homepage."
   },
   "Metadata": {
     "title": "Pokédex",

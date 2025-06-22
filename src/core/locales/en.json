@@ -2,6 +2,7 @@
   "Homepage": {
     "title": "All Pokémons",
     "search": "Search",
+    "error": "Could not load more data.",
     "items": {
       "pokemon": "Pokémon",
       "favourites": "Favourites"
@@ -10,6 +11,13 @@
       "company": "Copyright 2022 Triple. All rights reserved.",
       "trademarks": "Pokémon and Pokémon character names are trademarks of Nintendo."
     }
+  },
+  "NotFound": {
+    "title": "404",
+    "headline": "Oops! This page ran away!",
+    "descriptionEscape": "Looks like this page escaped from our Pokédex.",
+    "descriptionHelp": "Don't worry, we'll help you find your way back!",
+    "backHome": "Take me back to safety."
   },
   "Metadata": {
     "title": "Pokédex",
