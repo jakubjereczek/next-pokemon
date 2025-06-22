@@ -1,20 +1,25 @@
 'use client';
 
+import { CloudAlert } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import React, { useRef } from 'react';
 import { getPokemonListAction } from '@/core/actions';
 import { Flex } from '@/ui/components/Flex/Flex';
 import Loader from '@/ui/components/Loader/Loader';
 import PokemonList from '@/ui/components/PokemonList/PokemonList';
+import Typography from '@/ui/components/Typography/Typography';
 import useInfiniteScroll from '@/ui/hooks/ui/useInfiniteScroll';
 import useIntersection from '@/ui/hooks/ui/useIntersection';
 
 type Props = {
-  initialItems: any[];
+  initialItems: string[];
 };
 
 const ClientPokemonGrid: React.FC<Props> = ({ initialItems }) => {
+  const t = useTranslations('Homepage');
   const ref = useRef<HTMLDivElement | null>(null);
-  const { items, isFetching, loadMore } = useInfiniteScroll({
+
+  const { items, isFetching, loadMore, hasFatalError } = useInfiniteScroll({
     initialItems,
     limit: 20,
     fetchFn: getPokemonListAction,
@@ -33,7 +38,14 @@ const ClientPokemonGrid: React.FC<Props> = ({ initialItems }) => {
           </Flex>
         </div>
       )}
-      <div ref={ref} />
+      {hasFatalError ? (
+        <Flex align="center" justify="center" className="gap-2 pt-12">
+          <CloudAlert className="h-8 w-8" />
+          <Typography variant="body1">{t('error')}</Typography>
+        </Flex>
+      ) : (
+        <div ref={ref} />
+      )}
     </>
   );
 };

@@ -65,7 +65,7 @@ With each PR you can 'check' the user story that is related to it, so you have a
 - [ ] The user must be able to see all the stats of a Pokemon in three tabs
 - [ ] The user must be able to check/uncheck a Pokemon as favorite
 - [ ] The user must be able to see an overview of all their favorite Pokemon on a different page/route
-- [ ] The user should see a 'not found' page when the route is not identified
+- [x] The user should see a 'not found' page when the route is not identified
 - [ ] The user should be able to search through all the Pokemon
 - [ ] The user must be able to navigate the site with a keyboard
 - [ ] Semantically correct HTML should be used to help with accessibility
